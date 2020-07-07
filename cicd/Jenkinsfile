@@ -48,7 +48,7 @@ pipeline {
 
           pwd
           ls -al
-          cd amazon-eks-cicd-codebuild-eks-alb-bg/flask-docker-app
+          cd amazon-eks-cdk-blue-green-cicd/flask-docker-app
           $(aws ecr get-login --no-include-email)
           docker build -t $ECR_REPO_URI:$TAG .
           docker push $ECR_REPO_URI:$TAG
